@@ -12,3 +12,4 @@ El equipo/ software para empezar:
 <br />
 - [McStudio](https://www.mcthings.com/s/mcStudioInstall-xfe2.msi "McStudio")  (Unicamente para windows por ahora) <br />
 - Una cuenta en Sigfox: [https://backend.sigfox.com/](https://backend.sigfox.com/) Para México puedes obtener una cuenta escribiendo al correo contacto@iotnet.mx
+- Una cuenta de Microsoft Azure [https://portal.azure.com](https://portal.azure.com)
