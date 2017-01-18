@@ -15,5 +15,7 @@ El equipo/ software para empezar:
 - Una cuenta de Microsoft Azure [https://portal.azure.com](https://portal.azure.com)
 
 ## Hola Mundo con McDemo205 ##
+Al iniciar el programa McStudio, ir a la pestaña de 
 
+## Setup de Microsoft Azure ##
 
