@@ -6,6 +6,7 @@ Se usará la lectura del GPS embebido en el McDemo205, el sensor de temperatura,
 # Antes de Empezar
 El equipo/ software para empezar:
 - McDemo205 de McThings
-![McDemo205](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/McDemo205.jpg)
 <br>
+![McDemo205](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/McDemo205.jpg)
+
 - McStudio 
