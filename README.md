@@ -8,4 +8,5 @@ El equipo/ software para empezar:
 - McDemo205 de McThings
 <br>
 ![McDemo205](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/McDemo205.jpg?raw=true)
-- McStudio 
+<br>
+- <a https://www.mcthings.com/s/mcStudioInstall-xfe2.msi>McStudio</a> (Unicamente para windows por ahora)
