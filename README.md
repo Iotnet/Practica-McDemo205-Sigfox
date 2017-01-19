@@ -29,16 +29,16 @@ Para entender la facilidad de [McScript](https://static1.squarespace.com/static/
 ![ExampleProj](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/ExampleProj.png?raw=true) <br />
 
 Class Demo                                                       //Cada proyecto se define por una clase <br />
-    Shared Event BlinkGreen() RaiseEvent Every 2000 milliSeconds //El tipo de evento determina el alcance <br />
-        Led2 = True                                               
-        Thread.Sleep(100000)                                     //Tiempo que permanecerá encendido el Led2 <br />
-        Led2 = False                
-    End Event                                                     
-    Shared Event BlinkRed() RaiseEvent Every 1500 milliSeconds
-        Led3 = True
-        Thread.Sleep(100000)
-        Led3 = False
-    End Event
+     Shared Event BlinkGreen() RaiseEvent Every 2000 milliSeconds //El tipo de evento determina el alcance <br />
+         Led2 = True                                               
+         Thread.Sleep(100000)                                     //Tiempo que permanecerá encendido el Led2 <br />
+         Led2 = False                
+     End Event                                                     
+     Shared Event BlinkRed() RaiseEvent Every 1500 milliSeconds
+         Led3 = True
+         Thread.Sleep(100000)
+         Led3 = False
+     End Event
 End Class
 
 
