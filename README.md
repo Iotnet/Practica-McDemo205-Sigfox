@@ -15,14 +15,15 @@ El equipo/ software para empezar:
 - Una cuenta de Microsoft Azure [https://portal.azure.com](https://portal.azure.com)
 
 ## Overview de McDemo205 ##
-Al iniciar el programa McStudio, ir a la pestaña Tools > Devices. Verifica que el puente del McDemo esté alimentado por USB:
-![McDemoImg](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/image.png?raw=true)<br /> <br />
+Verifica que el puente del McDemo esté alimentado por USB:
+![McDemoImg](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/image.png?raw=true)<br /> 
+Al iniciar el programa McStudio, ir a la pestaña Tools > Devices.  <br />
 ![Devices](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Captura%20de%20pantalla%202017-01-18%20a%20las%207.10.12%20p.m..png?raw=true)<br />
 Seleccionar Testboard Gateway y Connect Gateway. Después **retirar el puente del McDemo y volverlo a colocar en la alimentación USB** para reconocer el dispositivo. Después elegir el botón de Connect Device. Al conectarse se puede cerrar esta ventana. 
 <br />
 ![ConnectDevice](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/ConnectDev.png?raw=true)<br />
 <br /> 
-### Primeros pasos con McDemo <br />
+### Primeros pasos con McDemo ###### <br />
 Si ya tienes experiencia con McThings pasa [aquí] [GNSS]<br />
 Para entender la facilidad de McScript, el lenguaje usado por los productos de McThings, veamos un par de ejemplos incluidos en McStudio:
 ![ExampleProj](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/ExampleProj.png?raw=true) <br />
