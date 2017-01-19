@@ -28,10 +28,10 @@ Pasa directamente al [proyecto de GNSS] (GNSS) <br />
 Para entender la facilidad de [McScript](https://static1.squarespace.com/static/5644f11fe4b0d6ca7d80d351/t/57c61f35b8a79ba9708b2cc4/1472601916268/mc-ScriptUserGuide.pdf), el lenguaje usado por los productos de McThings, veamos un par de ejemplos incluidos en McStudio:
 ![ExampleProj](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/ExampleProj.png?raw=true) <br />
 
-Class Demo                                                       //Cada proyecto se define por una clase <br />
-     Shared Event BlinkGreen() RaiseEvent Every 2000 milliSeconds //El tipo de evento determina el alcance <br />
+Class Demo                                                       'Cada proyecto se define por una clase <br />
+     Shared Event BlinkGreen() RaiseEvent Every 2000 milliSeconds 'El tipo de evento determina el alcance <br />
          Led2 = True                                               
-         Thread.Sleep(100000)                                     //Tiempo que permanecerá encendido el Led2 <br />
+         Thread.Sleep(100000)                                     'Tiempo que permanecerá encendido el Led2 <br />
          Led2 = False                
      End Event                                                     
      Shared Event BlinkRed() RaiseEvent Every 1500 milliSeconds
