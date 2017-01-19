@@ -15,7 +15,8 @@ El equipo/ software para empezar:
 - Una cuenta de Microsoft Azure [https://portal.azure.com](https://portal.azure.com)
 
 ## Hola Mundo con McDemo205 ##
-Al iniciar el programa McStudio, ir a la pestaña de 
+Al iniciar el programa McStudio, ir a la pestaña Tools > Devices. 
+![McDemoImg](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/image.png?raw=true)
 
 ## Setup de Microsoft Azure ##
 
