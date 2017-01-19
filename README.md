@@ -30,11 +30,11 @@ Para entender la facilidad de [McScript](https://static1.squarespace.com/static/
 
 ``Class Demo``                                                     <br />
    ``Shared Event BlinkGreen() RaiseEvent Every 2000 milliSeconds`` <br />
-         ``Led2 = True``                                            <br />  
+         ``Led2 = True``                                            <br />
          ``Thread.Sleep(100000)``                                     <br />
          ``Led2 = False``                <br />
-     ``End Event``                             <br />                        
-  ``Shared Event BlinkRed() RaiseEvent Every 1500 milliSeconds``<br />
+     ``End Event``                             <br />
+   ``Shared Event BlinkRed() RaiseEvent Every 1500 milliSeconds``<br />
        ``Led3 = True``<br />
          ``Thread.Sleep(100000)`` <br />
          ``Led3 = False`` <br />
