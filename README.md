@@ -24,9 +24,21 @@ Seleccionar Testboard Gateway y Connect Gateway. Después **retirar el puente de
 ![ConnectDevice](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/ConnectDev.png?raw=true)<br />
 <br /> 
 ### Primeros pasos con McDemo <br />
-[Pasa directamente al proyecto de GNSS] (GNSS) <br />
+Pasa directamente al [proyecto de GNSS] (GNSS) <br />
 Para entender la facilidad de McScript, el lenguaje usado por los productos de McThings, veamos un par de ejemplos incluidos en McStudio:
 ![ExampleProj](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/ExampleProj.png?raw=true) <br />
+
+Class Demo    //Cada proyecto se define por una clase
+    Shared Event BlinkGreen() RaiseEvent Every 2000 milliSeconds       //El tipo de evento "Shared" determina el alcance que           Led2 = True                                                      tendrá el evento
+        Thread.Sleep(100000)
+        Led2 = False
+    End Event
+    Shared Event BlinkRed() RaiseEvent Every 1500 milliSeconds
+        Led3 = True
+        Thread.Sleep(100000)
+        Led3 = False
+    End Event
+End Class
 
 
 
