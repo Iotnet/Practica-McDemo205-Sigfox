@@ -21,7 +21,7 @@ Al iniciar el programa McStudio, ir a la pestaña Tools > Devices. Verifica que 
 Seleccionar Testboard Gateway y Connect Gateway. Después **retirar el puente del McDemo y volverlo a colocar en la alimentación USB** para reconocer el dispositivo. Después elegir el botón de Connect Device. <br />
 ![ConnectDevice](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/ConnectDev.png?raw=true)<br />
 <br /> 
-###### Primeros pasos con McDemo ###### 
+### Primeros pasos con McDemo
 <br />
 Si ya tienes experiencia con McThings pasa [aquí] [GNSS]<br />
 Para entender la facilidad de McScript, el código usado por los productos de McThings, veamos un par de ejemplos:
