@@ -39,7 +39,7 @@ Para entender la facilidad de [McScript](https://static1.squarespace.com/static/
          ``Thread.Sleep(100000)`` <br />
          ``Led3 = False`` <br />
      ``End Event`` <br />
-``End Class`` <br />
+``End Class`` <br /> <br />
 Cambiamos LedGreen y LedRed por Led2 y Led3 respectivamente. Al crear un projecto 
 
 
