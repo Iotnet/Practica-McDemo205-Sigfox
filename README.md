@@ -34,17 +34,15 @@ Para entender la facilidad de [McScript](https://static1.squarespace.com/static/
          ``Thread.Sleep(100000)``                                     <br />
          ``Led2 = False``                <br />
      ``End Event``                             <br />
-   ``Shared Event BlinkRed() RaiseEvent Every 1500 milliSeconds``<br />
+    ``Shared Event BlinkRed() RaiseEvent Every 1500 milliSeconds``<br />
        ``Led3 = True``<br />
          ``Thread.Sleep(100000)`` <br />
          ``Led3 = False`` <br />
      ``End Event`` <br />
 ``End Class`` <br /> <br />
-Cambiamos ``LedGreen`` y ``LedRed`` por ``Led2`` y ``Led3`` respectivamente. Al crear un projecto automáticamente se genera la clase del nombre del proyecto. El tipo de evento ``Shared Event`` determina el alcance que tendrá, e.g. si las variables serán accesibles por otros eventos o sólo dentro de ese evento. Los leds se comportan como salidas digitales y tienen función de encendido y apagado (no pwm). Otra forma sería: <br />
-``Shared Event blinkLEDs() RaiseEvent Every 500 milliSeconds``<br />
-  ``Led2 = Not Led2`` <br />
-``End Event``<br />
-
+Cambiamos ``LedGreen`` y ``LedRed`` por ``Led2`` y ``Led3`` respectivamente. Al crear un projecto automáticamente se genera la clase del nombre del proyecto. El tipo de evento ``Shared Event`` determina el alcance que tendrá, e.g. si las variables serán accesibles por otros eventos o sólo dentro de ese evento. Los leds se comportan como salidas digitales y tienen función de encendido y apagado (no pwm). <br /> <br />
+Para correr el programa sólo hay que compilarlo y ejecutar: <br />
+![BuildMcTh](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/BuildMcTh.png?raw=true) <br />
 Usar los botónes no es mucho mas difícil<br />
 ``Shared Event SW1FallingEdge()``<br />
    ``LED2 = True``<br />
