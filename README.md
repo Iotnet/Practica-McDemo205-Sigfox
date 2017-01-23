@@ -65,8 +65,8 @@ Esta es la configuración básica para enviar un mensaje por Sigfox:<br />
     ``Lplan.Sigfox(sfData)``<br />
     ``LED2 = False``<br />
  ``End Event``<br />
-La primera parte nos dice que al presionar el botón 1 empezará el evento. El led es un indicador de que el evento está funcionando correctamente y ``Thread.Sleep(500000)`` es un tiempo para que no se apague inmediatamente<br />
-``Lplan.SigfoxRadioZone(sigfoxradiozone.US)`` Define la frecuencia a la que se enviarán los mensajes, la misma que se usa en US.<br />
+La primera parte nos dice que al presionar el botón 1 empezará el evento. El led es un indicador de que el evento está funcionando correctamente y ``Thread.Sleep(500000)`` es un tiempo para que no se apague inmediatamente.<br />
+``Lplan.SigfoxRadioZone(sigfoxradiozone.US)`` Define la frecuencia a la que se enviarán los mensajes, la misma que se usa en US.<br /> <br />
 ``Dim sfData As ListOfByte = New ListOfByte`` Crea la lista de bytes que se enviarán por Sigfox. Se pueden enviar hasta 12 bytes por mensaje (24 caracteres en hexadecimal) en cada mensaje por Sigfox. Los bytes que se envían en este mensaje son ``0x40 0x87 0x1A`` <br />
   
 ## Setup de Microsoft Azure ##
