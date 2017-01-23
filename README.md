@@ -70,7 +70,11 @@ La primera parte nos dice que al presionar el botón 1 empezará el evento. El l
 
 ### Sigfox Backend
 En el portal de Sigfox https://backend.sigfox.com/welcome/news entramos a Device y damos click en el ID del dispositivo.<br />
-![BuildMcTh](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Device.png?raw=true) <br />
+![BuildMcTh](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Device.png?raw=true) <br /> <br />
+En la pestaña de messages se mostrará el mensaje recibido y las estaciones que lo recibieron.<br /> <br />
+![BuildMcTh](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Msg.png?raw=true) <br /> <br />
+
+
 
   
   
