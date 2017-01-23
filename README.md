@@ -41,21 +41,22 @@ Para entender la facilidad de [McScript](https://static1.squarespace.com/static/
      ``End Event`` <br />
 ``End Class`` <br /> <br />
 Cambiamos ``LedGreen`` y ``LedRed`` por ``Led2`` y ``Led3`` respectivamente. Al crear un projecto automáticamente se genera la clase del nombre del proyecto. El tipo de evento ``Shared Event`` determina el alcance que tendrá, e.g. si las variables serán accesibles por otros eventos o sólo dentro de ese evento. Los leds se comportan como salidas digitales y tienen función de encendido y apagado (no pwm). <br /> <br />
-Para correr el programa sólo hay que compilarlo y ejecutar: <br />
+Para correr el programa sólo hay que compilarlo, ejecutar y presionar el botón 1 : <br />
 ![BuildMcTh](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/BuildMcTh.png?raw=true) <br />
 Usar los botónes no es mucho mas difícil<br />
 ``Shared Event SW1FallingEdge()``<br />
    ``LED2 = True``<br />
    ``Thread.Sleep(100000)``<br />
+   ``Led2 = False``<br />
 ``End Event``<br />
 
-###Enviando un mensaje a Sigfox
+### Enviando un mensaje a Sigfox
 Esta es la configuración básica para enviar un mensaje por Sigfox:<br />
 ``Class SigfoxDemo``<br />
   ``Shared Event Button1FallingEdge()`` <br />
+    ``Lplan.SigfoxRadioZone(sigfoxradiozone.US)``<br />
     ``Led2= True``<br />
     ``Thread.Sleep(500000)``<br />
-    ``Lplan.SigfoxRadioZone(sigfoxradiozone.US)``<br />
     ``Dim sfData As ListOfByte = New ListOfByte``<br />
     ``sfData.Add(0x40)``<br />
     ``sfData.Add(0x87)``<br />
@@ -64,8 +65,14 @@ Esta es la configuración básica para enviar un mensaje por Sigfox:<br />
     ``LED2 = False``<br />
  ``End Event``<br /> <br />
 La primera parte nos dice que al presionar el botón 1 empezará el evento. El led es un indicador de que el evento está funcionando correctamente y ``Thread.Sleep(500000)`` es un tiempo para que no se apague inmediatamente.<br /> <br />
-``Lplan.SigfoxRadioZone(sigfoxradiozone.US)`` Define la frecuencia a la que se enviarán los mensajes, la misma que se usa en US.<br /> <br />
+``Lplan.SigfoxRadioZone(sigfoxradiozone.US)`` Define la frecuencia a la que se enviarán los mensajes, la misma que se usa en US (902 MHz).<br /> <br />
 ``Dim sfData As ListOfByte = New ListOfByte`` Crea la lista de bytes que se enviarán por Sigfox. Se pueden enviar hasta 12 bytes por mensaje (24 caracteres en hexadecimal) en cada mensaje por Sigfox. Los bytes que se envían en este mensaje son ``0x40 0x87 0x1A`` <br />
+
+### Sigfox Backend
+En el portal de Sigfox https://backend.sigfox.com/welcome/news entramos a Device y damos click en el ID del dispositivo.<br />
+![BuildMcTh](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Device.png?raw=true) <br />
+
+  
   
 ## Setup de Microsoft Azure ##
 
