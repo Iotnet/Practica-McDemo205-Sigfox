@@ -54,16 +54,18 @@ Usar los botónes no es mucho mas difícil<br />
 Esta es la configuración básica para enviar un mensaje por Sigfox:<br />
 ``Class SigfoxDemo``<br />
    ``Shared Event Button1FallingEdge()`` <br />
-     ``Lplan.SigfoxRadioZone(sigfoxradiozone.US)``<br />
-     ``Led2= True``<br />
-     ``Thread.Sleep(500000)``<br />
-     ``Dim sfData As ListOfByte = New ListOfByte``<br />
-     ``sfData.Add(0x40)``<br />
-     ``sfData.Add(0x87)``<br />
-     ``sfData.Add(0x1A)``<br />
-     ``Lplan.Sigfox(sfData)``<br />
-     ``LED2 = False``<br />
-``End Event``<br /> <br />
+      ``Lplan.SigfoxRadioZone(sigfoxradiozone.US)``<br />
+      ``Led2= True``<br />
+      ``Thread.Sleep(500000)``<br />
+      ``Dim sfData As ListOfByte = New ListOfByte``<br />
+      ``sfData.Add(0x40)``<br />
+      ``sfData.Add(0x87)``<br />
+      ``sfData.Add(0x1A)``<br />
+      ``Lplan.Sigfox(sfData)``<br />
+      ``LED2 = False``<br />
+   ``End Event``<br />
+``End Class``<br />  
+<br />
 La primera parte nos dice que al presionar el botón 1 empezará el evento. El led es un indicador de que el evento está funcionando correctamente y ``Thread.Sleep(500000)`` es un tiempo para que no se apague inmediatamente.<br /> <br />
 ``Lplan.SigfoxRadioZone(sigfoxradiozone.US)`` Define la frecuencia a la que se enviarán los mensajes, la misma que se usa en US (902 MHz).<br /> <br />
 ``Dim sfData As ListOfByte = New ListOfByte`` Crea la lista de bytes que se enviarán por Sigfox. Se pueden enviar hasta 12 bytes por mensaje (24 caracteres en hexadecimal) en cada mensaje por Sigfox. Los bytes que se envían en este mensaje son ``0x40 0x87 0x1A`` <br />
