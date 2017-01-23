@@ -16,7 +16,7 @@ El equipo/ software para empezar:
 
 ## Overview de McDemo205 ##
 Verifica que el puente del McDemo esté alimentado por USB:
-![McDemoImg](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/image.png?raw=true)<br /> 
+![McDemoImg](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Connection.png?raw=true)<br /> 
 Al iniciar el programa McStudio, ir a la pestaña Tools > Devices.  <br />
 ![Devices](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Captura%20de%20pantalla%202017-01-18%20a%20las%207.10.12%20p.m..png?raw=true)<br />
 Seleccionar Testboard Gateway y Connect Gateway. Después **retirar el puente del McDemo y volverlo a colocar en la alimentación USB** para reconocer el dispositivo. Después elegir el botón de Connect Device. Al conectarse se puede cerrar esta ventana. 
