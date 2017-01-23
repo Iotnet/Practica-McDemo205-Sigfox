@@ -40,14 +40,35 @@ Para entender la facilidad de [McScript](https://static1.squarespace.com/static/
          ``Led3 = False`` <br />
      ``End Event`` <br />
 ``End Class`` <br /> <br />
-Cambiamos ``LedGreen`` y ``LedRed`` por ``Led2`` y ``Led3`` respectivamente. Al crear un projecto automáticamente se genera la clase del nombre del proyecto. El tipo de evento ``Shared Event`` determina el alcance que tendrá, e.g. si las variables serán accesibles por otros eventos o sólo dentro de ese evento. Los leds se comportan como salidas digitales y tienen función de encendido y apagado (no pwm). Otra forma de encender un led sería <br />
-``Shared Event blinkLEDs() RaiseEvent Every 500 milliSeconds``
-  ``Led2 = Not Led2`` 
+Cambiamos ``LedGreen`` y ``LedRed`` por ``Led2`` y ``Led3`` respectivamente. Al crear un projecto automáticamente se genera la clase del nombre del proyecto. El tipo de evento ``Shared Event`` determina el alcance que tendrá, e.g. si las variables serán accesibles por otros eventos o sólo dentro de ese evento. Los leds se comportan como salidas digitales y tienen función de encendido y apagado (no pwm). Otra forma sería: <br />
+``Shared Event blinkLEDs() RaiseEvent Every 500 milliSeconds``<br />
+  ``Led2 = Not Led2`` <br />
 ``End Event``<br />
 
-Usar los botónes no es mucho mas difícil
+Usar los botónes no es mucho mas difícil<br />
+``Shared Event SW1FallingEdge()``<br />
+   ``LED2 = True``<br />
+   ``Thread.Sleep(100000)``<br />
+``End Event``<br />
 
+###Enviando un mensaje a Sigfox
+Esta es la configuración básica para enviar un mensaje por Sigfox:<br />
+``Class SigfoxDemo``<br />
+  ``Shared Event Button1FallingEdge()`` <br />
+    ``Led2= True``<br />
+    ``Thread.Sleep(500000)``<br />
+    ``Lplan.SigfoxRadioZone(sigfoxradiozone.US)``<br />
+    ``Dim sfData As ListOfByte = New ListOfByte``<br />
+    ``sfData.Add(0x40)``<br />
+    ``sfData.Add(0x87)``<br />
+    ``sfData.Add(0x1A)``<br />
+    ``Lplan.Sigfox(sfData)``<br />
+    ``LED2 = False``<br />
+ ``End Event``<br />
+La primera parte nos dice que al presionar el botón 1 empezará el ciclo. El led es un indicador de que el evento está funcionando correctamente y ``Thread.Sleep(500000)`` es el tiempo que permanece encendido el led para ver el led encendido.<br />
+``Lplan.SigfoxRadioZone(sigfoxradiozone.US)`` Define la frecuencia a la que se enviarán los mensajes, la misma que se usa en US.<br />
 
-
+  
+  
 ## Setup de Microsoft Azure ##
 
