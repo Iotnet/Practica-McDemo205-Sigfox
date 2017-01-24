@@ -45,6 +45,7 @@ Cambiamos ``LedGreen`` y ``LedRed`` por ``Led2`` y ``Led3`` respectivamente. Al 
 Para correr el programa sólo hay que compilarlo, ejecutar y presionar el botón 1 : <br />
 ![BuildMcTh](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/BuildMcTh.png?raw=true) <br />
 Usar los botónes no es mucho mas difícil<br />
+
 ```
 Shared Event SW1FallingEdge()
    LED2 = True
@@ -53,6 +54,7 @@ Shared Event SW1FallingEdge()
 End Event
 ```
 ### Enviando un mensaje a Sigfox
+
 Esta es la configuración básica para enviar un mensaje por Sigfox:<br />
 ```
 Class SigfoxDemo
