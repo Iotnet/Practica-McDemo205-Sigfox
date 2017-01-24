@@ -54,19 +54,21 @@ Usar los botónes no es mucho mas difícil<br />
 
 ### Enviando un mensaje a Sigfox
 Esta es la configuración básica para enviar un mensaje por Sigfox:<br />
-``Class SigfoxDemo``<br />
-   ``Shared Event Button1FallingEdge()`` <br />
-      ``Lplan.SigfoxRadioZone(sigfoxradiozone.US)``<br />
-      ``Led2= True``<br />
-      ``Thread.Sleep(500000)``<br />
-      ``Dim sfData As ListOfByte = New ListOfByte``<br />
-      ``sfData.Add(0x40)``<br />
-      ``sfData.Add(0x87)``<br />
-      ``sfData.Add(0x1A)``<br />
-      ``Lplan.Sigfox(sfData)``<br />
-      ``LED2 = False``<br />
-   ``End Event``<br />
-``End Class``<br />  
+```
+Class SigfoxDemo
+   Shared Event Button1FallingEdge()
+      Lplan.SigfoxRadioZone(sigfoxradiozone.US)
+      Led2= True
+      Thread.Sleep(500000)
+      Dim sfData As ListOfByte = New ListOfByte
+      sfData.Add(0x40)
+      sfData.Add(0x87)
+      sfData.Add(0x1A)
+      Lplan.Sigfox(sfData)
+      LED2 = False
+   End Event
+End Class
+```
 <br />
 La primera parte nos dice que al presionar el botón 1 empezará el evento. El led es un indicador de que el evento está funcionando correctamente y ``Thread.Sleep(500000)`` es un tiempo para que no se apague inmediatamente.<br /> <br />
 ``Lplan.SigfoxRadioZone(sigfoxradiozone.US)`` Define la frecuencia a la que se enviarán los mensajes, la misma que se usa en US (902 MHz).<br /> <br />
@@ -137,7 +139,7 @@ Class SigfoxGNSS
         End If
     End Event   
 End Class 
-``
+```
 <br />
 
 
