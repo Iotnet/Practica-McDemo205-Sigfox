@@ -16,7 +16,7 @@ El equipo/ software para empezar:
 
 ## Overview de McDemo205 ##
 Verifica que el puente del McDemo esté alimentado por USB:
-![McDemoImg](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Connection.png?raw=true)<br /> 
+![McDemoImg](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Connection.png?raw=true)<br /> <br />
 Al iniciar el programa McStudio, ir a la pestaña Tools > Devices.  <br />
 ![Devices](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Captura%20de%20pantalla%202017-01-18%20a%20las%207.10.12%20p.m..png?raw=true)<br />
 Seleccionar Testboard Gateway y Connect Gateway. Después **retirar el puente del McDemo y volverlo a colocar en la alimentación USB** para reconocer el dispositivo. Después elegir el botón de Connect Device. Al conectarse se puede cerrar esta ventana. 
@@ -46,12 +46,13 @@ Cambiamos ``LedGreen`` y ``LedRed`` por ``Led2`` y ``Led3`` respectivamente. Al 
 Para correr el programa sólo hay que compilarlo, ejecutar y presionar el botón 1 : <br />
 ![BuildMcTh](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/BuildMcTh.png?raw=true) <br />
 Usar los botónes no es mucho mas difícil<br />
-``Shared Event SW1FallingEdge()``<br />
-   ``LED2 = True``<br />
-   ``Thread.Sleep(100000)``<br />
-   ``Led2 = False``<br />
-``End Event``<br />
-
+```
+Shared Event SW1FallingEdge()
+   LED2 = True
+   Thread.Sleep(100000)
+   Led2 = False
+End Event
+```
 ### Enviando un mensaje a Sigfox
 Esta es la configuración básica para enviar un mensaje por Sigfox:<br />
 ```
@@ -98,7 +99,7 @@ Class SigfoxGNSS
   End Event
     
   Shared Event LocationDelivery()
-    'Called when GNSS location acquired or timeout occurred
+      'Called when GNSS location acquired or timeout occurred
        'Get latitude
        Dim Lat As Float = Device.GetLatitude()
         
