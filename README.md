@@ -149,8 +149,10 @@ End Class
 En esta sección se editará el JSON que se envía a través de Sigfox a otros clouds como Microsoft Azure, IBM Watson, etc.<br />
 ![Edit](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Edit.png?raw=true) <br />
 <br /> 
-En display type elige Custom y en Custom configuration introduce: <br />
-``Latitud::float:32:little-endian Longitud::float:32:little-endian  Timeout::uint:16`` <br /> <br />
+En display type elige Custom y Custom configuration introduce: <br />
+``Latitud::float:32:little-endian Longitud::float:32:little-endian  Timeout::uint:16`` <br />
+Nombre- tipo de var- Nº de bits- Bit mas significativo (Big endian por default)
+<br /> <br />
 ![CustomPayload](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/CustomPl.png?raw=true) <br />
 <br />
 Ahora se puede agregar esta información en el payload de Sigfox. También al ir a la sección de mensajes se mostrarán los valores obtenidos:<br />
