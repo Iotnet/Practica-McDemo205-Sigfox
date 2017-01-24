@@ -78,7 +78,8 @@ En la pestaña de messages se puede ver el mensaje recibido, las estaciones que 
 
 ### Obteniendo la ubicación por GNSS
 El siguiente código nos da la ubicación del GNSS, el tiempo que tarda en obtener la ubicación y la envía por Sigfox. <br />
-  ``Class SigfoxGNSS
+  ``
+  Class SigfoxGNSS
      'GNSS Configuration Constants 
       Const GNSS_TIMEOUT_uS As Integer = 120000000 'GNSS Timeout = 120s
       Const GNSS_MIN_SAT_COUNT As Integer = 3 'GNSS minimum sats = 3
@@ -132,7 +133,7 @@ El siguiente código nos da la ubicación del GNSS, el tiempo que tarda en obten
         End If
     End Event   
 End Class 
-.``
+``
 <br />
 
 
