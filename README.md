@@ -81,7 +81,7 @@ En la pestaña de messages se puede ver el mensaje recibido, las estaciones que 
 ![BuildMcTh](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Msg.png?raw=true) <br /> <br />
 
 ### Obteniendo la ubicación por GNSS
-El siguiente código nos da la ubicación del GNSS, el tiempo que tarda en obtener la ubicación y la envía por Sigfox. Las secciones comentadas aparecen con `` 'Esta forma``<br />
+El siguiente código nos da la ubicación del GNSS, el tiempo que tarda en obtener la ubicación y la envía por Sigfox. Las secciones comentadas aparecen ``'De esta forma``<br />
     
 ```
 Class SigfoxGNSS 
