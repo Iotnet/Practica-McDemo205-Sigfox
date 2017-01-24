@@ -151,7 +151,7 @@ En esta sección se editará el JSON que se envía a través de Sigfox a otros c
 <br /> 
 En display type elige Custom y Custom configuration introduce: <br />
 ``Latitud::float:32:little-endian Longitud::float:32:little-endian  Timeout::uint:16`` <br />
-Nombre- tipo de var- Nº de bits- Bit mas significativo (Big endian por default)
+Nombre:: tipo de var: Nº de bits: Bit mas significativo (big-endian por default)
 <br /> <br />
 ![CustomPayload](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/CustomPl.png?raw=true) <br />
 <br />
