@@ -79,15 +79,15 @@ En la pestaña de messages se puede ver el mensaje recibido, las estaciones que 
 ### Obteniendo la ubicación por GNSS
 El siguiente código nos da la ubicación del GNSS, el tiempo que tarda en obtener la ubicación y la envía por Sigfox. <br />
 ``Class SigfoxGNSS``<br />
-    ``'GNSS Configuration Constants``<br />
-    ``Const GNSS_TIMEOUT_uS As Integer = 120000000 'GNSS Timeout = 120s`` <br />
-     ``Const GNSS_MIN_SAT_COUNT As Integer = 3 'GNSS minimum sats = 3`` <br />
+      'GNSS Configuration Constants<br />
+      ``Const GNSS_TIMEOUT_uS As Integer = 120000000 'GNSS Timeout = 120s`` <br />
+      ``Const GNSS_MIN_SAT_COUNT As Integer = 3 'GNSS minimum sats = 3`` <br />
     
-    ``Shared Event SW1FallingEdge()
-        'turn on LED2 to indicate GNSS acquisition started
-         Led2 = True
-         Device.StartGPS(GNSS_TIMEOUT_uS, GNSS_MIN_SAT_COUNT)
-     End Event``
+    ``Shared Event SW1FallingEdge()``<br />
+        'turn on LED2 to indicate GNSS acquisition started`` <br />
+        ``Led2 = True``<br />
+        ``Device.StartGPS(GNSS_TIMEOUT_uS, GNSS_MIN_SAT_COUNT)``<br />
+    ``End Event`` <br />
     
     ``Shared Event LocationDelivery()
         'Called when GNSS location acquired or timeout occurred
