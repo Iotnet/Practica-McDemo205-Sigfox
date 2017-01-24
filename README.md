@@ -82,6 +82,8 @@ En la pestaña de messages se puede ver el mensaje recibido, las estaciones que 
 
 ### Obteniendo la ubicación por GNSS
 El siguiente código nos da la ubicación del GNSS, el tiempo que tarda en obtener la ubicación y la envía por Sigfox. Las secciones comentadas aparecen ``'De esta forma``<br />
+Al presionar el botón 1 encenderá el led2, si detecta una ubicación del GNSS encendera el led3 unos segundos y después encenderá. Si no detecta nada solo apagará el led2 después de 2 minutos (``GNSS_Timeout = 120s``).<br />
+El GNSS necesita estar en exterior, estático y alrededor de 10 metros de edificios.<br />
     
 ```
 Class SigfoxGNSS 
@@ -142,7 +144,9 @@ End Class
 ```
 <br />
 
+### Creando un callback en Sigfox
+Ingresa a la sección de Device Type > Callbacks donde se encuentre el McDemo y crea uno nuevo.<br /> 
+![NewCallback](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/NewCallback.png?raw=true)
 
-  
 ## Setup de Microsoft Azure ##
 
