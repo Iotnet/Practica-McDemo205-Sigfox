@@ -146,12 +146,16 @@ End Class
 ### Personalizando variables en Sigfox
 En esta sección se editará el JSON que se envía a través de Sigfox a otros clouds como Microsoft Azure, IBM Watson, etc.<br />
 ![Edit](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Edit.png?raw=true) <br />
+<br /> 
+En display type elige Custom y en Custom configuration introduce: <br />
+``Latitud::float:32:little-endian Longitud::float:32:little-endian  Timeout::uint:16`` <br />
+![CustomPayload](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/CustomPl.png?raw=true) <br />
 
 
 
 
 ### Creando un callback en Sigfox
-Ingresa a la sección de Device Type > Callbacks donde se encuentre el McDemo y crea uno nuevo.<br /> 
+Ingresa a la sección de Device Type > Callbacks donde se encuentre el McDemo y crea uno nuevo. Luego ok.<br /> 
 ![NewCallback](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/NewCallback.png?raw=true) <br />
 
 
