@@ -93,7 +93,7 @@ Class SigfoxGNSS
  
   Shared Event SW1FallingEdge()
     'turn on LED2 to indicate GNSS acquisition started
-    Led2 = True``<br />
+    Led2 = True
     Device.StartGPS(GNSS_TIMEOUT_uS, GNSS_MIN_SAT_COUNT)
   End Event
     
