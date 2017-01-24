@@ -27,19 +27,21 @@ Seleccionar Testboard Gateway y Connect Gateway. Después **retirar el puente de
 Pasa directamente al [proyecto de GNSS] (GNSS) <br />
 Para entender la facilidad de [McScript](https://static1.squarespace.com/static/5644f11fe4b0d6ca7d80d351/t/57c61f35b8a79ba9708b2cc4/1472601916268/mc-ScriptUserGuide.pdf), el lenguaje usado por los productos de McThings, veamos un par de ejemplos incluidos en McStudio:
 ![ExampleProj](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/ExampleProj.png?raw=true) <br />
-
-``Class Demo``                                                     <br />
-   ``Shared Event BlinkGreen() RaiseEvent Every 2000 milliSeconds`` <br />
-         ``Led2 = True``                                            <br />
-         ``Thread.Sleep(100000)``                                     <br />
-         ``Led2 = False``                <br />
-   ``End Event``                             <br />
-   ``Shared Event BlinkRed() RaiseEvent Every 1500 milliSeconds``<br />
-         ``Led3 = True`` <br />
-         ``Thread.Sleep(100000)`` <br />
-         ``Led3 = False`` <br />
-    ``End Event`` <br />
-``End Class`` <br /> <br />
+```
+Class Demo
+   Shared Event BlinkGreen() RaiseEvent Every 2000 milliSeconds
+       Led2 = True
+       Thread.Sleep(100000)
+       Led2 = False
+   End Event
+   Shared Event BlinkRed() RaiseEvent Every 1500 milliSeconds
+       Led3 = True
+       Thread.Sleep(100000)
+       Led3 = False
+   End Event
+End Class
+```
+<br /> <br />
 Cambiamos ``LedGreen`` y ``LedRed`` por ``Led2`` y ``Led3`` respectivamente. Al crear un projecto automáticamente se genera la clase del nombre del proyecto. El tipo de evento ``Shared Event`` determina el alcance que tendrá, e.g. si las variables serán accesibles por otros eventos o sólo dentro de ese evento. Los leds se comportan como salidas digitales y tienen función de encendido y apagado (no pwm). <br /> <br />
 Para correr el programa sólo hay que compilarlo, ejecutar y presionar el botón 1 : <br />
 ![BuildMcTh](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/BuildMcTh.png?raw=true) <br />
@@ -81,47 +83,47 @@ El siguiente código nos da la ubicación del GNSS, el tiempo que tarda en obten
     
 ```
 Class SigfoxGNSS 
-'GNSS Configuration Constants 
-Const GNSS_TIMEOUT_uS As Integer = 120000000 'GNSS Timeout = 120s
-Const GNSS_MIN_SAT_COUNT As Integer = 3 'GNSS minimum sats = 3
-```
-     
-     Shared Event SW1FallingEdge()
-        'turn on LED2 to indicate GNSS acquisition started
-        ``Led2 = True``<br />
-        ``Device.StartGPS(GNSS_TIMEOUT_uS, GNSS_MIN_SAT_COUNT)``<br />
-    ``End Event`` <br />
+  'GNSS Configuration Constants 
+  'GNSS Timeout = 120s
+  Const GNSS_TIMEOUT_uS As Integer = 120000000 
+  'GNSS minimum sats = 3
+  Const GNSS_MIN_SAT_COUNT As Integer = 3 
+ 
+  Shared Event SW1FallingEdge()
+    'turn on LED2 to indicate GNSS acquisition started
+    Led2 = True``<br />
+    Device.StartGPS(GNSS_TIMEOUT_uS, GNSS_MIN_SAT_COUNT)
+  End Event
     
-    ``Shared Event LocationDelivery()`` <br />
-    ``'Called when GNSS location acquired or timeout occurred `` <br />
-         
-        ``'Get latitude`` <br />
-        ``Dim Lat As Float = Device.GetLatitude()`` <br />
+  Shared Event LocationDelivery()
+    'Called when GNSS location acquired or timeout occurred
+       'Get latitude
+       Dim Lat As Float = Device.GetLatitude()
         
-        'Get longitude
-        Dim Lon As Float = Device.GetLongitude()
+       'Get longitude
+       Dim Lon As Float = Device.GetLongitude()
         
-        'Get GNSS fix time
-        Dim Time As Integer = Device.GetGpsFixTime()
-        'Set GNSS In Seconds And set As Short 
-        Dim timeSec As Float = Time / 1000000
-        Dim timeSecShort As Short = timeSec.ToShort
+       'Get GNSS fix time
+       Dim Time As Integer = Device.GetGpsFixTime()
+       'Set GNSS In Seconds And set As Short 
+       Dim timeSec As Float = Time / 1000000
+       Dim timeSecShort As Short = timeSec.ToShort
         
-        'Create list of bytes To send over Sigfox
-        Dim SigfoxMsg As ListOfByte = New ListOfByte()
+       'Create list of bytes To send over Sigfox
+       Dim SigfoxMsg As ListOfByte = New ListOfByte()
         
-        'Turn not available location to 0.0
-        If Lat.IsNaN() Then
-            Lat = 0.0
-        End If
-        If Lon.IsNaN() Then
-            Lon = 0.0
-        End If
+       'Turn not available location to 0.0
+       If Lat.IsNaN() Then
+          Lat = 0.0
+       End If
+       If Lon.IsNaN() Then
+          Lon = 0.0
+       End If
         
-        'Add bytes to Sigfox Message
-        SigfoxMsg.AddFloat(Lat)
-        SigfoxMsg.AddFloat(Lon)
-        SigfoxMsg.AddShort(timeSecShort)
+       'Add bytes to Sigfox Message
+       SigfoxMsg.AddFloat(Lat)
+       SigfoxMsg.AddFloat(Lon)
+       SigfoxMsg.AddShort(timeSecShort)
         
         'If the GNSS got a location, send over Sigfox 
         If Lat <> 0.0 Then
