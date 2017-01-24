@@ -131,10 +131,8 @@ El siguiente código nos da la ubicación del GNSS, el tiempo que tarda en obten
             Led2 = False
         End If
     End Event   
-End Class`` <br />
-
-
-
+End Class``
+Asap
 
 
 
