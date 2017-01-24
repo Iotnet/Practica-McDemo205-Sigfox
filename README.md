@@ -95,7 +95,7 @@ El siguiente código nos da la ubicación del GNSS, el tiempo que tarda en obten
         ``'Get latitude`` <br />
         ``Dim Lat As Float = Device.GetLatitude()`` <br />
         
-        'Get longitude
+        ``'Get longitude
         Dim Lon As Float = Device.GetLongitude()
         
         'Get GNSS fix time
