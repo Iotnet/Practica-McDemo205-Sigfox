@@ -24,7 +24,6 @@ Seleccionar Testboard Gateway y Connect Gateway. Después **retirar el puente de
 ![ConnectDevice](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/ConnectDev.png?raw=true)<br />
 <br /> 
 ### Primeros pasos con McDemo <br />
-Pasa directamente al [proyecto de GNSS] (GNSS) <br />
 Para entender la facilidad de [McScript](https://static1.squarespace.com/static/5644f11fe4b0d6ca7d80d351/t/57c61f35b8a79ba9708b2cc4/1472601916268/mc-ScriptUserGuide.pdf), el lenguaje usado por los productos de McThings, veamos un par de ejemplos incluidos en McStudio:
 ![ExampleProj](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/ExampleProj.png?raw=true) <br />
 ```
