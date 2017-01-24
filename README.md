@@ -93,8 +93,8 @@ El siguiente código nos da la ubicación del GNSS, el tiempo que tarda en obten
     ``'Called when GNSS location acquired or timeout occurred `` <br />
          
         ``'Get latitude`` <br />
-        Dim Lat As Float = Device.GetLatitude()
-        
+        ``Dim Lat As Float = Device.GetLatitude()`` <br />
+        
         'Get longitude
         Dim Lon As Float = Device.GetLongitude()
         
