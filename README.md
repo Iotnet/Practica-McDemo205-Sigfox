@@ -154,7 +154,7 @@ En display type elige Custom y en Custom configuration introduce: <br />
 ![CustomPayload](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/CustomPl.png?raw=true) <br />
 <br />
 Ahora se puede agregar esta información en el payload de Sigfox. También al ir a la sección de mensajes se mostrarán los valores obtenidos:<br />
-![CustomCallback](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/CustomMsg.png?raw=true) <br />
+![CustomCallback](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/CustomMsg1.png?raw=true) <br />
 
 
 ### Creando un callback en Sigfox
