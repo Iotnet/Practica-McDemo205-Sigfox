@@ -145,8 +145,13 @@ End Class
 <br />
 
 ### Creando un callback en Sigfox
+En esta sección se editará el JSON que se envía a través de Sigfox a otros clouds como Microsoft Azure, IBM Watson, etc.<br />
+
 Ingresa a la sección de Device Type > Callbacks donde se encuentre el McDemo y crea uno nuevo.<br /> 
-![NewCallback](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/NewCallback.png?raw=true)
+![NewCallback](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/NewCallback.png?raw=true) <br />
+
+
+
 
 ## Setup de Microsoft Azure ##
 
