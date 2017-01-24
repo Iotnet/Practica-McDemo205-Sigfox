@@ -73,13 +73,71 @@ La primera parte nos dice que al presionar el botón 1 empezará el evento. El l
 ### Sigfox Backend
 En el portal de Sigfox https://backend.sigfox.com/welcome/news entramos a Device y damos click en el ID del dispositivo.<br />
 ![BuildMcTh](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Device.png?raw=true) <br /> <br />
-En la pestaña de messages se puede ver el mensaje recibido, las estaciones que lo recibieron, la señal con la que llegó <br /> <br />
+En la pestaña de messages se puede ver el mensaje recibido, las estaciones que lo recibieron, la señal con la que llegó y el estado de los callbacks (ver más adelante). <br /> <br />
 ![BuildMcTh](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Msg.png?raw=true) <br /> <br />
 
+### Obteniendo la ubicación por GNSS
+El siguiente código nos da la ubicación del GNSS, el tiempo que tarda en obtener la ubicación y la envía por Sigfox. 
+``Class SigfoxGNSS
+    //GNSS Configuration Constants
+    Const GNSS_TIMEOUT_uS As Integer = 120000000 'GNSS Timeout = 120s
+    Const GNSS_MIN_SAT_COUNT As Integer = 3 'GNSS minimum sats = 3
+    
+    Shared Event SW1FallingEdge()
+        'turn on LED2 to indicate GNSS acquisition started
+        Led2 = True
+        Device.StartGPS(GNSS_TIMEOUT_uS, GNSS_MIN_SAT_COUNT)
+    End Event
+    
+    Shared Event LocationDelivery()
+        'Called when GNSS location acquired or timeout occurred
+        
+        'Get latitude
+        Dim Lat As Float = Device.GetLatitude()
+        
+        'Get longitude
+        Dim Lon As Float = Device.GetLongitude()
+        
+        'Get GNSS fix time
+        Dim Time As Integer = Device.GetGpsFixTime()
+        'Set GNSS In Seconds And set As Short 
+        Dim timeSec As Float = Time / 1000000
+        Dim timeSecShort As Short = timeSec.ToShort
+        
+        'Create list of bytes To send over Sigfox
+        Dim SigfoxMsg As ListOfByte = New ListOfByte()
+        
+        'Turn not available location to 0.0
+        If Lat.IsNaN() Then
+            Lat = 0.0
+        End If
+        If Lon.IsNaN() Then
+            Lon = 0.0
+        End If
+        
+        'Add bytes to Sigfox Message
+        SigfoxMsg.AddFloat(Lat)
+        SigfoxMsg.AddFloat(Lon)
+        SigfoxMsg.AddShort(timeSecShort)
+        
+        'If the GNSS got a location, send over Sigfox 
+        If Lat <> 0.0 Then
+            Lplan.Sigfox(SigfoxMsg)
+            Led3 = True
+            Thread.Sleep(7000000)
+            Led3 = False
+            Led2 = False
+        Else
+            Led2 = False
+        End If
+    End Event   
+End Class`` <br />
 
 
 
-  
+
+
+
   
 ## Setup de Microsoft Azure ##
 
