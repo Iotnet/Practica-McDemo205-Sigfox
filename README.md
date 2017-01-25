@@ -191,10 +191,10 @@ Dejaremos Connection string en blanco por ahora para preparar el backend en Azur
 <br />
 ## Setup de Microsoft Azure ##
 Conectarse a https://portal.azure.com e iniciar una aplicación de IotHub. <br />
-![Callback](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/NewIotHub.png?raw=true) <br />
+![NewHub](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/NewIotHub.png?raw=true) <br />
 
 (Tomar la suscripción gratuita si está disponible)
-![Callback](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/IotCenter.png?raw=true) <br />
+![IotCenter](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/IotCenter.png?raw=true) <br />
 
 
 
