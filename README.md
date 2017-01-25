@@ -163,7 +163,25 @@ Ahora se puede agregar esta información en el payload de Sigfox. También al ir
 Ingresa a la sección de Device Type > Callbacks donde se encuentre el McDemo y crea uno nuevo.<br /> 
 ![NewCallback](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/NewCallback.png?raw=true) <br />
 <br />
-Elegir Azure Iot Hub.
+Elegir Azure Iot Hub. Agrega el Json Body que se enviará a Azure, 
+```
+{
+"time" : "{time}",
+"device" : "{device}",
+"duplicate" : "{duplicate}",
+"snr" : "{snr}",
+"rssi" : "{rssi}",
+"avgSnr" : "{avgSnr}",
+"station" : "{station}",
+"lat" : "{lat}",
+"lng" : "{lng}",
+"seqNumber" : "{seqNumber}",
+"data" : "{data}"
+"Latitud" : "{customData#Latitud}",
+"Longitud" : "{customData#Longitud}",
+"Timeout" : "{customData#Timeout}"
+}
+```
 ![IotHub](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/IotHub.png?raw=true) <br />
 
 
