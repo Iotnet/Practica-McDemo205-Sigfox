@@ -197,7 +197,8 @@ Conectarse a https://portal.azure.com e iniciar una aplicación de IotHub. <br /
 Elegir un nombre para el centro y los recursos (Tomar la suscripción gratuita si está disponible) y crear. <br />
 ![IotCenter](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/IotCenter.png?raw=true) <br />
 
-
+Una vez creado entrar a las Directivas de Acceso compartido en el Hub.<br />
+![Acces](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Access.png?raw=true) <br />
 
 
 
