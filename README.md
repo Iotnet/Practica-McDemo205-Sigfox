@@ -184,6 +184,8 @@ Agrega el Json Body que se enviará a Azure. <br />
 "seqNumber" : {seqNumber}
 }
 ```
+<br />
+![Callback](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/callback.png?raw=true) <br />
 
 
 
