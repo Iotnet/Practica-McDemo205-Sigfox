@@ -163,8 +163,8 @@ Ahora se puede agregar esta información en el payload de Sigfox. También al ir
 Ingresa a la sección de Device Type > Callbacks donde se encuentre el McDemo y crea uno nuevo.<br /> 
 ![NewCallback](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/NewCallback.png?raw=true) <br />
 <br />
-Elegir custom callback. Cambiamos "Use HTTP Method" a POST, y en Url Pattern elegiremos la dirección a la que se enviarán los datos. Dejaremos esta parte para configurar Azure y que reciba los datos de Sigfox. 
-
+Elegir Azure Iot Hub.
+![IotHub](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/IotHub.png?raw=true) <br />
 
 
 ## Setup de Microsoft Azure ##
