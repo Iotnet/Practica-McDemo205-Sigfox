@@ -199,8 +199,15 @@ Elegir un nombre para el centro y los recursos (Tomar la suscripción gratuita s
 Una vez creado entrar a las Directivas de Acceso compartido en el Hub.<br />
 ![Acces](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Access.png?raw=true) <br /> 
 <br />
-La cadena de conexión será el link para postear en el backend de Sigfox. (**Connection string**) <br /> 
+La cadena de conexión será el link para postear en el backend de Sigfox (**Connection string**). Pegarla y darle ok. <br /> 
 ![Acces](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Keys.png?raw=true) <br />
+<br />
+Regresando a Azure, ahora crearemos una instancia de Steam Analitics para crear un mapa en Power BI con los datos del GNSS.<br />
+![Analitics](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/SteamA.png?raw=true) <br />
+<br />
+![Analitics2](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/SteamA2.png?raw=true) <br />
+<br />
+
 
 
 
