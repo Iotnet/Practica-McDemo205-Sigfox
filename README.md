@@ -150,7 +150,7 @@ En esta sección se editará el JSON que se envía a través de Sigfox a otros c
 ![Edit](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Edit.png?raw=true) <br />
 <br /> 
 En display type elige Custom y Custom configuration introduce: <br />
-``Latitud::float:32:little-endian Longitud::float:32:little-endian  Timeout::uint:16`` <br />
+``lat::float:32:little-endian lon::float:32:little-endian  Timeout::uint:16`` <br />
 Nombre:: tipo de var: Nº de bits: Bit mas significativo (big-endian por default)
 <br /> <br />
 ![CustomPayload](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/CustomPl.png?raw=true) <br />
@@ -163,26 +163,28 @@ Ahora se puede agregar esta información en el payload de Sigfox. También al ir
 Ingresa a la sección de Device Type > Callbacks donde se encuentre el McDemo y crea uno nuevo.<br /> 
 ![NewCallback](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/NewCallback.png?raw=true) <br />
 <br />
-Elegir Azure Iot Hub. Agrega el Json Body que se enviará a Azure, 
+Elegir Azure Iot Hub. <br />
+![IotHub](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/IotHub.png?raw=true) <br />
+Agrega el Json Body que se enviará a Azure. <br /> 
 ```
-{
-"time" : "{time}",
+{ 
 "device" : "{device}",
-"duplicate" : "{duplicate}",
-"snr" : "{snr}",
-"rssi" : "{rssi}",
-"avgSnr" : "{avgSnr}",
+"data" : "{data}",
+"Latitud": "{customData#lat}",
+"Longitud": "{customData#lon}",
+"Timeout": "{customData#Timeout}",
+"time" : {time},
+"duplicate" : {duplicate},
+"snr" : {snr},
 "station" : "{station}",
-"lat" : "{lat}",
-"lng" : "{lng}",
-"seqNumber" : "{seqNumber}",
-"data" : "{data}"
-"Latitud" : "{customData#Latitud}",
-"Longitud" : "{customData#Longitud}",
-"Timeout" : "{customData#Timeout}"
+"avgSignal" : {avgSnr},
+"lat" : {lat},
+"lng" : {lng},
+"rssi" : {rssi},
+"seqNumber" : {seqNumber}
 }
 ```
-![IotHub](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/IotHub.png?raw=true) <br />
+
 
 
 ## Setup de Microsoft Azure ##
