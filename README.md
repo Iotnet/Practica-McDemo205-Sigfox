@@ -213,7 +213,19 @@ Mantener el siguiente formato, grupo de consumidores default, formato Json, codi
 ![Entradas](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/newInput.png?raw=true) <br />
 Crear una nueva salida a Power BI. <br />
 ![Salidas](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/salida.png?raw=true) <br /> <br />
-Y finalmente una nueva consulta <br />
+Y finalmente una nueva consulta. <br />
+![NQuerry](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Nueva%20consulta.png?raw=true) <br />
+Agregar el siguiente código:
+```
+SELECT 
+    Cast(Latitude as float) as Lat,
+    Cast(Longitud as float) as Lon,
+    System.Timestamp AS Timestamp
+    Into
+    OutputPowerBi
+    From
+    inputMcthings
+```
 ![NQuerry](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Nueva%20consulta.png?raw=true) <br />
 ![Salidas](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/querry.png?raw=true) <br /> <br />
 
