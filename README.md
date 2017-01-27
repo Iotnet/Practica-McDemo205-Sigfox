@@ -209,8 +209,11 @@ Regresando a Azure, ahora crearemos una instancia de Steam Analitics para crear 
 Agregar una nueva entrada <br />
 ![Analitics](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Analitic.png?raw=true) <br />
 <br />
-Mantener este formato, grupo de consumidores default, formato Json, codificacion UTF-8. <br />
-![Analitics](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/newInput.png?raw=true) <br />
+Mantener el siguiente formato, grupo de consumidores default, formato Json, codificacion UTF-8. <br />
+![Entradas](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/newInput.png?raw=true) <br />
+Crear una nueva salida a Power BI. <br />
+![Salidas](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/salidas.png?raw=true) <br />
+
 
 
 
