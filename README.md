@@ -210,7 +210,7 @@ Agregar una nueva entrada <br />
 ![Analitics](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Analitic.png?raw=true) <br />
 <br />
 Mantener este formato, grupo de consumidores default, formato Json, codificacion UTF-8. <br />
-![Analitics](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/NewInput.png?raw=true) <br />
+![Analitics](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/newInput.png?raw=true) <br />
 
 
 
