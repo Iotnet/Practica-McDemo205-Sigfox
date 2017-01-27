@@ -226,9 +226,11 @@ SELECT
     From
     inputMcthings
 ```
-![NQuerry](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Nueva%20consulta.png?raw=true) <br />
 ![Salidas](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/querry.png?raw=true) <br /> <br />
-
+Entrar a Power BI y editar el conjunto de datos: <br />
+![Datos](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/conjDatos.png?raw=true) <br /> <br />
+Ahora puedes crear dashboards, mapas y lo que se te ocurra con power BI!
+![Mapa](https://github.com/Iotnet/Quickstart-McDemo205-Sigfox/blob/master/Images/Map.png?raw=true) <br /> <br />
 
 
 
